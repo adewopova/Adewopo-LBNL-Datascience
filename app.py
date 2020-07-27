@@ -25,8 +25,10 @@ def create_poster():
     # Instanitate an iPoster
     my_poster = iPoster(title="Topic Modelling; Identifying Risk Factors Using Ngrams in Unstructured Medical Data", #Title of your poster
                         authors_dict={"Adewopo Victor" : "University of Cincinnati","Praneetha Gounipa" : "University of Cincinnati", # Authors in {student, mentors, PI} order
-                                      "Wangia Victoria Anderson" : "University of Cincinnati",
-                                      "Silvia Crivelli" : "Lawrence Berkeley National Laboratory"},
+                                      "Wangia Victoria" : "University of Cincinnati",
+                                      "Silvia Crivelli" : "Lawrence Berkeley National Laboratory",
+                                      "Rafael Zamora" : "Lawrence Berkeley National Laboratory",
+                                      "Shirley Wang" : "Lawrence Berkeley National Laboratory"},
                         logo = "UC.png", # Home institution logo
                         banner_color=colors.DOE_GREEN, # Color of banner header; colors has preset colors
                         text_color=colors.WHITE)
@@ -45,7 +47,7 @@ def create_poster():
         text="For this study we utilized the MIMIC-III dataset which is a  open source dataset developed by the MIT Lab for Computational Physiology, \
         comprising deidentified health data associated with over 46,000 unique patients medical data. \
         Text mining is a field of data mining that involves the extraction of new information. \
-        We identified features from the unstructured text using controlled vocabularies, rule sets, reference dictionaries that were hand coded to preserve      the contextual meaning of words in the data. This approach comprised of five steps of data selection, pre-processing, transformation, data mining and interpretation Text mining extracts information from existing data to unravel or derive new information[4].     We focused on the unstructured part of the MIMIC III data set and selected 8,583 patients that has the diagnosis related to diseases of despair[5]. \
+        We identified features from the unstructured text using controlled vocabularies, rule sets, reference dictionaries that were hand coded to preserve the contextual meaning of words in the data. This approach comprised of five steps of data selection, pre-processing, transformation, data mining and interpretation Text mining extracts information from existing data to unravel or derive new information[4].     We focused on the unstructured part of the MIMIC III data set and selected 8,583 patients that has the diagnosis related to diseases of despair[5]. \
         The International classification of diseases 9th edition was used in grouping patients diagnosed for medical conditions that are considered diseases of despair. \
         N-gram models are widely used in statistical natural language processing to identify sequence of words in a given dataset. \
         We utilized combination of unigrams, bigrams and trigrams, to yield higher accuracy in text categorization which has been proven to yield better results \
@@ -60,9 +62,10 @@ def create_poster():
         img3={"filename":"wordcloud.png", "height":"6in", "width":"10in", "caption":"This figure showcase the most common keywords in each topics"})
     my_poster.add_section(title="Findings", text="We have been able to train a model that can classify patient medical history into relevant topics,\
         utilizing unigrams and bigrams together in training the LDA model. The topmost recurring trigrams suggested medical conditions related to patients taht are of old age. Hemodynamics is one of the recurring themes in the trigram, series which are related to hypertension and blood flow.\
-        Hexagrams gave more contextual meaning to the top recurring words in other of sequence in the dataset [Hexagram].  The  dominant topics in the dataset are;Renal Failure, Hypertension, Diabetes, Heamodynamic and Blood organs. The Most recurring Keywords  are [‘Assessment’, ‘Respiratory’,\
-        ‘Failure’, ‘Response’, ‘Plan’, ‘Action’, ‘Acute’, ‘Renal’, ‘Blood’).")
-    my_poster.add_section(title="Conclusion", text="Medical information contains a large set of data. The mean word count in a single patient medical history contains about 4,700  words. Our trained model can parse through a large set of medical history and predict what topic a medical history belong too and the percentage of the contribution the topic has based on medical history. This saves health care professionals from reading a large set of patient medical history and can also be utilized in providing prioritized care based on the identified topic.     Our proposed models do not only contribute to medical research but has potential of increasing life expectancy by providing urgent medical care to at  least 1 out of 5 identified patients   and save more lives that are lost due to suicide.")        
+        Hexagrams gave more contextual meaning to the top recurring words in other of sequence in the dataset Hexagram.  The  dominant topics in the dataset are; Renal Failure,\
+        Hypertension, Diabetes, Heamodynamic and Blood organs. The Most recurring Keywords  are ‘Assessment’, ‘Respiratory’,‘Failure’, ‘Response’, ‘Plan’, ‘Action’, ‘Acute’, ‘Renal’, ‘Blood’.")
+    my_poster.add_section(title="Conclusion", text="Medical information contains a large set of data. The mean word count in a single patient medical history contains about 4,700  words. Our trained model can parse through a large set of medical history and predict what topic a medical history belong too and the percentage of the contribution the topic has based on medical history. This saves health care professionals from reading a large set of patient medical history and can also be utilized in providing prioritized care based on the identified topic.     Our proposed models do not only contribute to medical research but has potential of increasing life expectancy by providing urgent medical care to at  least 1 out of 5 identified patients.") 
+    my_poster.add_section(title="Acknowledgments", text="This work was supported in part by the U.S. Department of Energy, Office of Science, Computational Research Division (CRD) of the Berkeley National Lab.Special thanks to Dr.Wangia, Dr. Crivelli, Rafael, Shirley and to all the other team members for contributing to this research and making the summer fellowship memorable.")
        # Add sections to third column then add new column
     my_poster.next_column()
 

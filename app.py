@@ -13,7 +13,7 @@ from iposter.iposter import iPoster
 import iposter.colors as colors
 
 #*** Run Local Flag ***
-RUN_LOCAL=True
+RUN_LOCAL=False
 
 # ******************Define Your Interactive Poster Here***************
 # The following shows a sample interactive poster.
@@ -28,7 +28,7 @@ def create_poster():
                                       "Wangia Victoria" : "University of Cincinnati",
                                       "Silvia Crivelli" : "Lawrence Berkeley National Laboratory",
                                       "Rafael Zamora" : "Lawrence Berkeley National Laboratory",
-                                      "Shirley Wang" : "Lawrence Berkeley National Laboratory"},
+                                      "Xiange Wang" : "Lawrence Berkeley National Laboratory"},
                         logo = "UC.png", # Home institution logo
                         banner_color=colors.DOE_GREEN, # Color of banner header; colors has preset colors
                         text_color=colors.WHITE)

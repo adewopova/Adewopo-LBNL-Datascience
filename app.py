@@ -24,11 +24,11 @@ def create_poster():
 
     # Instanitate an iPoster
     my_poster = iPoster(title="Applying Machine Learning NLP Techniques to Investigate the Semantic Structure of Clinical Notes for Identifying SDOH", #Title of your poster
-                        authors_dict={"Adewopo Victor" : "University of Cincinnati","Praneetha Gounipa" : "University of Cincinnati", # Authors in {student, mentors, PI} order
-                                      "Wangia Victoria" : "University of Cincinnati",
-                                      "Silvia Crivelli" : "Lawrence Berkeley National Laboratory",
-                                      "Rafael Zamora" : "Lawrence Berkeley National Laboratory",
-                                      "Xiange Wang" : "Lawrence Berkeley National Laboratory"},
+                        authors_dict={"Adewopo Victor" :["University of Cincinnati", "Lawrence Berkeley National Laboratory"],
+                        "Praneetha Gounipa" : ["University of Cincinnati","Lawrence Berkeley National Laboratory"], # Authors in {student, mentors, PI} order
+                                      
+                        "Wangia-Anderson Victoria" : ["University of Cincinnati","Lawrence Berkeley National Laboratory"],
+                        "Silvia Crivelli" : ["Lawrence Berkeley National Laboratory"]},
                         logo = "UC.png", # Home institution logo
                         banner_color=colors.DOE_GREEN, # Color of banner header; colors has preset colors
                         text_color=colors.WHITE)
@@ -48,7 +48,7 @@ def create_poster():
     my_poster.next_column()
     my_poster.add_section(title="Figures",
         img1={"filename":"50-80trig.png", "height":"5in", "width":"9in", "caption":"The figure shows the top 30 recurring trigrams in order of sequence after processing our dataset."},
-        img2={"filename":"word.png", "height":"5in", "width":"9in", "caption":"This shows the  word count of dominant words in six topics and the importance of the words within each topic in terms of weights."},
+        img2={"filename":"word.png", "height":"5in", "width":"9in", "caption":"This figure shows the  word count of dominant words in six topics and the importance of the words within each topic in terms of weights."},
         img3={"filename":"wordcloud.png", "height":"5in", "width":"9in", "caption":"This figure showcase the most common keywords in each topics"})
     my_poster.add_section(title="Findings", text="We have been able to train a model that can classify patient medical history into relevant topics, utilizing unigrams and bigrams together in training the LDA model. The topmost recurring trigrams suggested medical conditions related to patients that are old. Hemodynamics is one of the recurring themes in the trigram, series which are related to hypertension and blood flow. Hexagrams gave more contextual meaning to the top recurring words in order of sequences in the dataset Hexagram.  The dominant topics in the dataset are; Renal failure, Hypertension, Diabetes, Hemodynamic, and Blood organs. The Most recurring Keywords are ‘Assessment’, ‘Respiratory’,‘Failure’, ‘Response’, ‘Plan’, ‘Action’, ‘Acute’, ‘Renal’, ‘Blood’.")
     my_poster.add_section(title="Conclusion", text="Medical information contains a large set of data. The mean word count in a single patient medical history contains about 4,700  words. Our trained model can parse through a large set of medical history and predict what topic a medical history belong too and the percentage of the contribution the topic has based on medical history. This saves health care professionals from reading a large set of patient medical history and can also be utilized in providing prioritized care based on the identified topic.") 
@@ -59,7 +59,7 @@ def create_poster():
     
     my_poster.add_section(title="Interactive LDA Plot",
     	pyLDA2={"filename":"topic.html", "height":"8in", "width":"12in", "caption": "This figure shows the dominant topics the medical history belonging to ten patients is classified to by our model and the percentage of contribution."},
-        pyLDA={"filename":"full_lda_html.html", "height":"8in", "width":"12in", "caption": "Hover the interactive plot to view the 10  topics and the frequency of the topwords.The circles represent different topics and the distance between them. Similar topics appear closer to eachother."},
+        pyLDA={"filename":"full_lda_html.html", "height":"8in", "width":"12in", "caption": "Hover on the interactive plot to view the 10  topics and the frequency of the topwords.The circles represent different topics and the distance between them. Similar topics appear closer to eachother."},
         pyLDA3={"filename":"DoD-TSNE.html", "height":"8in", "width":"12in", "caption": "This figure shows a 2D cluster of patients medical notes and what topic they have been classified to in the top ten topics from our LDA model."})
              
     my_poster.add_section(title="References", 
